@@ -1,0 +1,211 @@
+/* _servicos */
+
+#_servicos {
+    padding: 72px 0px 112px;
+}
+
+#_servicos ._content-servico {
+    position: relative;
+    margin-bottom: 21px;
+}
+
+#_servicos ._content-servico::after {
+    display: block;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#ffffff", GradientType=1);
+    z-index: 3;
+}
+
+#_servicos ._content-servico h3 {
+    color: var(--bs-white);
+    position: absolute;
+    bottom: 26px;
+    left: 16px;
+    z-index: 10;
+    margin-bottom: 0;
+}
+
+#_servicos ._content-servico img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+/* _servicos */
+
+/* #_destaques  */
+
+#_destaques {
+    background-color: #F4F4F4;
+    padding: 64px 0px 36px;
+}
+
+#_destaques ._item-destaques {
+    margin: 0px 10px;
+}
+
+#_destaques ._item-destaques ._content-item-destaques {
+    padding: 24px 28px 57px;
+}
+
+#_destaques ._link {
+    margin-left: 28px;
+}
+
+#_destaque-especial {
+    position: relative;
+    margin-top: 120px;
+}
+
+#_destaque-especial ._content-destque-especial {
+    width: 630px;
+    padding: 64px 65px 39px 113px;
+    background: var(--bs-white);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#_destaque-especial ._content-destque-especial h2 {
+    margin-bottom: 8px;
+}
+
+#_destaque-especial ._image-destaque {
+    object-fit: cover;
+    width: 1300px;
+}
+
+/* #_destaques  */
+
+/* #_infos-petrofernandes  */
+
+#_infos-petrofernandes {
+    background-color: var(--yellow);
+    padding: 24px 40px;
+}
+
+#_infos-petrofernandes h3 {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--color-default-green);
+}
+
+#_infos-petrofernandes p {
+    font-size: 14px;
+    font-weight: medium;
+    line-height: 18px;
+    margin-bottom: 0px;
+}
+
+._combustivel {
+    display: flex;
+    align-items: center;
+    cursor: grab;
+}
+
+._combustivel span._icon-posto {
+    padding: 15px 16px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+._combustivel span._icon-posto::after {
+    content: '';
+    background: url(/assets/img/icon-posto.svg) center no-repeat;
+    display: block;
+    width: 18px;
+    height: 20px;
+}
+
+#_infos-petrofernandes .float-start {
+    margin-right: 65px;
+}
+
+._combustivel ._text-combustivel h4 {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 0;
+}
+
+._combustivel ._text-combustivel h5 {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    letter-spacing: 0.25;
+    margin-bottom: 0;
+}
+
+/* #_infos-petrofernandes  */
+
+@media only screen and (max-width: 1370px) {
+    #_destaque-especial ._image-destaque {
+        width: 900px;
+    }
+    /* #_destaques  */
+}
+
+@media only screen and (max-width: 800px) {
+    #_destaques ._link {
+        margin-left: 0px;
+        text-align: center;
+        display: block;
+    }
+    #_destaque-especial ._image-destaque {
+        object-fit: cover;
+        width: 100%;
+    }
+    #_destaque-especial ._content-destque-especial {
+        width: auto;
+        padding: 24px 0 10px;
+        background: var(--bs-white);
+        position: relative;
+        inset: 0;
+    }
+    #_servicos {
+        padding: 70px 0px 67px;
+    }
+    #_servicos ._content-servico {
+        margin-bottom: 9px;
+    }
+    #_servicos ._content-servico h3 {
+        bottom: 16px;
+        left: 9px;
+        max-width: 85%;
+    }
+    section#_servicos .container .row .col:nth-of-type(odd) {
+        padding-left: 0;
+        padding-right: 4px;
+    }
+    section#_servicos .container .row .col:nth-of-type(even) {
+        padding-right: 0;
+        padding-left: 4px;
+    }
+    #_infos-petrofernandes {
+        background-color: var(--yellow);
+        padding: 9px 19px;
+    }
+    #_infos-petrofernandes h3 {
+        margin-bottom: 0;
+    }
+    #_infos-petrofernandes .container-fluid {
+        padding: 0px;
+    }
+    #_infos-petrofernandes .float-start {
+        margin-right: 13px;
+    }
+    ._combustivel span._icon-posto {
+        padding: 11px 12px;
+    }
+}
+
+@media only screen and (max-width: 600px) {}

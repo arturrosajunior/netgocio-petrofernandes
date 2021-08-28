@@ -1,0 +1,33 @@
+<div class="_noticias">
+    <section id="_noticias">
+        <div class="container">
+            <h1>{{textos?.titulo}}</h1>
+            <ng-container *ngIf="textos.descricao">
+                <div class="_text-noticias">
+                    <p [innerHTML]="textos?.descricao | noHtml"></p>
+                </div>
+            </ng-container>
+        </div>
+    </section>
+
+    <section id="_list-noticias">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-3">
+                <div class="col" *ngFor="let item of items">
+                    <div class="card">
+                        <a routerLink="{{item.url}}">
+                            <div class="_image-card-news" style="background:url({{item.imagem}})top;">
+                            </div>
+                        </a>
+                        <div class="_box-content-news">
+                            <h3 class="_title-card-news"><a routerLink="{{item.url}}">{{item.titulo}}</a></h3>
+                            <span class=" _date-card-news">{{item.data | date : 'dd MMM yyyy'}}</span>
+                            <p class="_text-card-news" [innerHtml]="truncateChar(item.descricao )"></p>
+                        </div>
+                        <a routerLink="{{item.url}}" class="_read-more-card-news">LER +</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

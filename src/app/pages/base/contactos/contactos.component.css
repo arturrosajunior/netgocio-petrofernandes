@@ -1,0 +1,117 @@
+/* _contactos */
+
+._contactos {
+    padding-bottom: 105px;
+    padding-top: 56px;
+}
+
+._content-contactos h2, ._content-contactos h1 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0px;
+    color: var(--color-default-text);
+    margin-bottom: 25px;
+}
+
+._content-contactos p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: var(--color-default-text);
+    margin-bottom: 0;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group-text {
+    border-radius: 0;
+    border-color: var(--grey);
+    width: 112px;
+    padding: 12px 0px 12px 20px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.input-group>.form-control, .form-check-input[type=checkbox] {
+    border-radius: 0;
+    border-color: var(--grey);
+}
+
+small {
+    margin-top: 26px;
+    margin-bottom: 16px;
+    display: block;
+    font-size: 13px;
+}
+
+label.form-check-label {
+    font-size: 13px;
+    line-height: 25px;
+}
+
+.btn.btn-default {
+    margin-top: 26px;
+    background: var(--color-default-green);
+    font-size: 15px;
+    color: var(--yellow);
+    font-weight: bold;
+    line-height: 21px;
+    padding: 10px 51px;
+    border-radius: 20px;
+    transition: .3s all;
+}
+
+.btn.btn-default:hover {
+    opacity: .7;
+}
+
+/* #_clientes */
+
+#_clientes {
+    padding: 66px 0px 68px;
+    background: #F2F3F5;
+}
+
+#_clientes .container {
+    padding-left: 165px !important;
+    padding-right: 165px !important;
+}
+
+#_clientes .container .row {
+    margin-top: 42px;
+    margin-bottom: 49px;
+}
+
+#_clientes img {
+    margin-bottom: 19px;
+    max-height: 66px;
+}
+
+#_clientes p a {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+/* #_clientes */
+
+@media only screen and (max-width: 800px) {
+    /* #_clientes */
+    #_clientes {
+        padding-top: 61px;
+    }
+    #_clientes .container {
+        padding-left: 19px !important;
+        padding-right: 19px !important;
+    }
+    /* #_clientes */
+    ._form {
+        padding-top: 57px;
+    }
+    ._content-contactos {
+        padding-top: 60px;
+    }
+}

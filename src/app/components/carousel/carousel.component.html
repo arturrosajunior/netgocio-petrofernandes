@@ -1,0 +1,80 @@
+<section id="_banner">
+    <div class="desk">
+        <div id="slideHomeDesk" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button *ngFor="let item of slides, index as i" type="button" data-bs-target="#slideHomeDesk"
+                    [attr.data-bs-slide-to]="i" [class.active]="i == 0" [attr.aria-label]="'Slide '+i"></button>
+            </div>
+            <div class="carousel-inner ">
+                <div *ngFor="let item of slides, index as i" class="carousel-item" [class.active]="i == 0">
+
+                    <img src="{{item.desktop_imagem}}" alt="Banner" class="img-fluid w-100 d-block">
+
+                    <div class="carousel-caption">
+                        <h5>
+                            {{item.titulo}}
+                        </h5>
+                        <p>
+                            {{item.subtitulo}}
+                        </p>
+                        <a [routerLink]="['/'+item.link_url]" class="btn btn-success">
+                            {{item.link_texto}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <ng-container *ngIf="slides.length>1">
+                <button class="carousel-control-prev" type="button" data-bs-target="#slideHomeDesk"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slideHomeDesk"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </ng-container> -->
+        </div>
+    </div>
+    <div class="mobile">
+        <div id="slideHomeMobile" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button *ngFor="let item of slides, index as i" type="button" data-bs-target="#slideHomeMobile"
+                    [attr.data-bs-slide-to]="i" [class.active]="i == 0" [attr.aria-label]="'Slide '+i"></button>
+            </div>
+            <div class="carousel-inner ">
+                <div *ngFor="let item of slides, index as i" class="carousel-item" [class.active]="i == 0">
+
+                    <img src="{{item.desktop_imagem}}" alt="Banner" class="img-fluid w-100 d-block">
+
+                    <div class="carousel-caption">
+                        <h5>
+                            {{item.titulo}}
+                        </h5>
+                        <p>
+                            {{item.subtitulo}}
+                        </p>
+                        <a [routerLink]="['/'+item.link_url]" class="btn btn-success">
+                            {{item.link_texto}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <ng-container *ngIf="slides.length>1">
+                <button class="carousel-control-prev" type="button" data-bs-target="#slideHomeMobile"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slideHomeMobile"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </ng-container> -->
+        </div>
+    </div>
+</section>

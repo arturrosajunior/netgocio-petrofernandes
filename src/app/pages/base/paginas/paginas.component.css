@@ -1,0 +1,82 @@
+/* banner full ou tamanho do conteudo */
+
+._content-width-full {
+    padding: 0;
+}
+
+._content-width {
+    padding-right: 54px;
+    padding-left: 54px;
+}
+
+._banner {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+    display: table;
+    padding: 0px 20%;
+}
+
+._banner::before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    display: block;
+    background: var(--color-default-green);
+    opacity: .4;
+    z-index: 0;
+}
+
+._content-banner {
+    position: relative;
+    z-index: 5;
+}
+
+._content-banner h2 {
+    margin-top: 24px;
+}
+
+/* banner full ou tamanho do conteudo */
+
+/* <!-- titulo + texto + botao --> */
+
+._modulo-title-text-button {
+    margin: 0 auto;
+}
+
+._modulo-title-text-button a {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    position: relative;
+    display: inline-block;
+}
+
+._modulo-title-text-button a._have-icon::after {
+    content: '';
+    display: inline-block;
+    background: url(/assets/img/icone-onlybattery.svg) center no-repeat;
+    width: 25px;
+    height: 25px;
+    margin-left: 9px;
+    vertical-align: bottom;
+}
+
+._modulo-title-text-button a._have-bg {
+    color: #fff;
+    font-size: 15px;
+    line-height: 22px;
+    position: relative;
+    padding: 13px 32px;
+    background: var(--grey);
+}
+
+@media only screen and (max-width: 800px) {
+    ._modulo-page {
+        padding-top: 60px;
+    }
+}
+
+/* <!-- titulo + texto + botao --> */

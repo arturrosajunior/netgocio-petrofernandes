@@ -1,0 +1,95 @@
+<header id="_header" class="_header">
+    <div class="container-fluid m-0 p-0">
+        <div class="d-flex align-items-center">
+
+            <button class="_petrofernandes" (click)="theme.changeTheme('_petrofernandes-theme')">
+                <img src="assets/img/logo-petrofernandes.svg" alt="logo" height="68px">
+            </button>
+
+            <button class="_efeitos" (click)="theme.changeTheme('_efeitos-theme')">
+                <img src="assets/img/logo-efeitos.svg" alt="logo" height="68px">
+            </button>
+            <button class="_open-menu">
+                <img src="assets/img/menu.svg" alt="Abrir menu">
+            </button>
+
+
+            <!-- FAZER 2 container e trocar de acordo com o bottao -->
+
+            <div class="_horarios-header px-4">
+                <ng-container *ngIf="theme.themeChange == '_petrofernandes-theme'">
+                    <div class="d-flex justify-content-end">
+                        <div class="_horario">
+                            <h3>Horário do Posto de Abastecimento</h3>
+                            <p>Aberto das 7h às 22h, 7 dias por semana</p>
+                        </div>
+                        <div class="_apoio">
+                            <h3>Apoio ao cliente</h3>
+                            <p>914 003 174 / 253 868 200</p>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="theme.themeChange == '_efeitos-theme'">
+                    <div class="d-flex justify-content-end">
+                        <div class="_horario">
+                            <h3>Horário do Pastelaria</h3>
+                            <p>Aberto das 7h às 22h, 7 dias por semana</p>
+                        </div>
+                        <div class="_apoio">
+                            <h3>Apoio ao cliente</h3>
+                            <p>927 677 729</p>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <ng-container *ngIf="theme.themeChange == '_petrofernandes-theme'">
+            <div class="_bem-vindo">
+                <p>Bem-vindo à Petrofernandes</p>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="theme.themeChange == '_efeitos-theme'">
+            <div class="_bem-vindo">
+                <p>Bem-vindo à Efeitos</p>
+            </div>
+        </ng-container>
+
+    </div>
+
+</header>
+<div class="_menu-fixed ">
+
+    <div class="container ">
+        <nav>
+            <ng-container *ngIf="theme.themeChange == '_petrofernandes-theme'">
+                <ul>
+                    <li *ngFor="let menuitem of menuPetrofernandes">
+                        <a *ngIf="!menuitem.linkexternal" routerLink="/{{menuitem.link}}"
+                            style="background: url({{menuitem.iconesvg}}) center no-repeat;">
+                            {{menuitem.title}}
+                        </a>
+                        <a *ngIf="menuitem.linkexternal" href="{{menuitem.link}}"
+                            style="background: url({{menuitem.iconesvg}}) center no-repeat;">
+                            {{menuitem.title}}
+                        </a>
+                    </li>
+                </ul>
+            </ng-container>
+            <ng-container *ngIf="theme.themeChange == '_efeitos-theme'">
+                <ul>
+                    <li *ngFor="let menuitem of menuEfeitos">
+                        <a *ngIf="!menuitem.linkexternal" routerLink="/{{menuitem.link}}"
+                            style="background: url({{menuitem.iconesvg}}) center no-repeat;">
+                            {{menuitem.title}}
+                        </a>
+                        <a *ngIf="menuitem.linkexternal" href="{{menuitem.link}}"
+                            style="background: url({{menuitem.iconesvg}}) center no-repeat;">
+                            {{menuitem.title}}
+                        </a>
+                    </li>
+                </ul>
+            </ng-container>
+
+        </nav>
+    </div>
+</div>

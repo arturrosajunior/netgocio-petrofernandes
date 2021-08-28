@@ -1,0 +1,68 @@
+<section id="_banner" *ngIf="item.imagem">
+    <div id="slideHome" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!--             
+            <div [class.active]="i==0" *ngFor="let image of item?.images ; index as i;" class="carousel-item"
+                style="background: url({{image}}) top no-repeat" title="Banner"></div> -->
+
+            <div class="carousel-item active" style="background: url({{item.imagem}}) top no-repeat;" title="Banner">
+            </div>
+        </div>
+        <!-- <button *ngIf="item?.images.length > 1;" class="carousel-control-prev" type="button" data-bs-target="#slideHome"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button *ngIf="item?.images.length > 1;" class="carousel-control-next" type="button" data-bs-target="#slideHome"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button> -->
+    </div>
+</section>
+
+<div *ngIf="!item.imagem" class="_margin-top"></div>
+
+
+
+
+<div class="_noticias">
+    <div class="container" id="_noticias">
+        <div class="row">
+            <div class="col-md-6">
+                <nav style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/">HOMEPAGE</a></li>
+                        <li class="breadcrumb-item"><a routerLink="/noticias">NOTÍCIAS</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{item?.titulo}}</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-md-6 text-end">
+                <a *ngIf="anterior" routerLink="../{{anterior.url}}" class="_anterior-link">&lt; Anterior</a>
+                <a *ngIf="seguinte" routerLink="../{{seguinte.url}}" class="_seguinte-link">SEGUINTE &gt;</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="_title">
+        <div class="container">
+            <div class="_title-content">
+                <h1>{{item?.titulo}}</h1>
+                <span class="_date-content-page-interna">{{item?.data | date : 'dd MMM yyyy'}}</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="_content-page-interna">
+        <div class="container">
+            <div class="_text-content">
+                <div [innerHtml]="item?.descricao"></div>
+                <div class="_partilhar">
+                    <button>PARTILHAR</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,410 @@
+/* You can add global styles to this file, and also import other style files */
+
+button:active {
+    border: unset;
+    box-shadow: 0;
+}
+
+:root {
+    --color-default-green: #006633;
+    --color-default-brown: #BE9061;
+    --color-default-text: #262626;
+    --grey: #D6DBE2;
+    --scrollbarBG: rgba(124, 121, 121, 0.507);
+    --yellow: #DADB04;
+    --brown: #5F3813;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+
+::-webkit-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--colorRed) var(--scrollbarBG);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--colorRed);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+
+body {
+    position: relative;
+    background-color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-size: 31px;
+    font-weight: bold;
+    line-height: 38px;
+    margin-bottom: 32px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 29px;
+    margin-bottom: 8px;
+}
+
+.desk {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+.container {
+    width: auto;
+    max-width: 100%;
+    padding-left: 54px !important;
+    padding-right: 54px !important;
+}
+
+/* bread */
+
+._padding {
+    padding-left: 54px !important;
+    padding-right: 54px !important;
+}
+
+._m47 {
+    margin-bottom: 47px;
+}
+
+._border-bottom {
+    border-bottom: 1px solid #F2F3F5;
+}
+
+.breadcrumb {
+    margin-top: 20px;
+}
+
+.breadcrumb .breadcrumb-item a {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 13px;
+    color: var(--grey);
+    outline: unset;
+    text-decoration: unset;
+    border-right: 1px solid;
+    padding-right: 8px;
+    display: inline-block;
+}
+
+.breadcrumb-item+.breadcrumb-item {
+    padding-left: 8px;
+}
+
+.breadcrumb .breadcrumb-item.active {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--grey);
+    outline: unset;
+    text-decoration: unset;
+    display: inline-block;
+}
+
+.breadcrumb-item+.breadcrumb-item::before, .breadcrumb-item.active:before {
+    float: unset;
+}
+
+/* bread */
+
+/* 
+._partilhar button {
+    text-indent: -9999px;
+    border: 0;
+    background: url(assets/img/partilhar.svg)transparent center no-repeat;
+    width: 75px;
+    height: 17px;
+} */
+
+.carousel-control-next-icon {
+    /* background: url(assets/img/arrow.svg) no-repeat !important; */
+    height: 31px;
+    transform: scaleX(-1);
+}
+
+.carousel-control-prev-icon {
+    /* background: url(assets/img/arrow.svg) no-repeat !important; */
+    height: 31px;
+}
+
+button.slick-next.slick-arrow {
+    right: 60px !important;
+    z-index: 9999;
+    /* background: url(assets/img/arrow.svg) no-repeat !important; */
+    height: 31px;
+    transform: scale(-1);
+}
+
+button.slick-next.slick-arrow:before {
+    background: transparent;
+    display: none;
+}
+
+button.slick-prev.slick-arrow {
+    left: 60px !important;
+    z-index: 9999;
+    /* background: url(assets/img/arrow.svg) no-repeat !important; */
+    height: 31px;
+}
+
+button.slick-prev.slick-arrow:before {
+    background: transparent;
+    display: none;
+}
+
+.slider-nav button.slick-prev {
+    left: 0 !important;
+    background: url(/assets/img/arrow.svg) #314057 center no-repeat !important;
+    height: 121px !important;
+    width: 111px !important;
+}
+
+.slider-nav button.slick-next {
+    right: 0px !important;
+    background: url(/assets/img/arrow.svg) #314057 center no-repeat !important;
+    height: 111px !important;
+    width: 111px !important;
+    top: 0;
+}
+
+.slider-nav button.slick-arrow {
+    opacity: 1;
+    transition: all .3s;
+}
+
+.slider-nav button.slick-arrow:hover {
+    background: url(/assets/img/arrow-hover.svg) #F78D1E center no-repeat !important;
+    opacity: 0.6;
+}
+
+#_servicos ._slider-servicos button.slick-next.slick-arrow {
+    right: 47% !important;
+    width: 52px !important;
+    bottom: 0 !important;
+    top: unset !important;
+}
+
+#_servicos ._slider-servicos button.slick-prev.slick-arrow {
+    left: 47% !important;
+    width: 52px !important;
+    bottom: -15px !important;
+    top: unset !important;
+}
+
+#_noticias ._slider-noticias {
+    position: relative;
+}
+
+#_noticias ._slider-noticias button.slick-prev.slick-arrow {
+    left: 0 !important;
+    z-index: 8;
+    background: url(/assets/img/arrow.svg) #fff center no-repeat !important;
+    height: 40px;
+    width: 40px;
+    top: 135px;
+    padding: 3px;
+    background-size: 15px !important;
+}
+
+#_noticias ._slider-noticias button.slick-next.slick-arrow {
+    right: 0 !important;
+    z-index: 8;
+    background: url(/assets/img/arrow.svg) #fff center no-repeat !important;
+    height: 40px;
+    width: 40px;
+    top: 115px;
+    padding: 3px;
+    background-size: 15px !important;
+}
+
+._text-contactos, ._text-contactos p, ._text-contactos * {
+    font-size: 16px !important;
+}
+
+figure {
+    margin: 0;
+}
+
+i {
+    font-style: italic;
+}
+
+a {
+    transition: all .3s;
+    outline: unset;
+    text-decoration: unset;
+}
+
+iframe {
+    margin: 0;
+}
+
+._title {
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: normal;
+    letter-spacing: 0.91px;
+    color: var(--grey);
+    text-transform: uppercase;
+    margin: 0;
+    display: inline-block;
+}
+
+._title:after {
+    content: '';
+    display: block;
+    background: var(--yellow);
+    height: 2px;
+    margin-top: 12px;
+}
+
+._subtitle {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    color: var(--color-default-green);
+    margin-top: 6px;
+    margin-bottom: 66px;
+}
+
+button {
+    border: 0;
+    background: transparent;
+}
+
+.sb-button svg {
+    color: var(--grey);
+}
+
+._portifolios ._slider-projetos button.slick-prev.slick-arrow {
+    left: 46.5% !important;
+    width: 52px !important;
+    bottom: -20px !important;
+    top: unset !important;
+    background-size: 25px !important;
+}
+
+._portifolios ._slider-projetos button.slick-next.slick-arrow {
+    right: 46.5% !important;
+    width: 52px !important;
+    bottom: 0px !important;
+    top: unset !important;
+    background-size: 25px !important;
+}
+
+/* THEMES */
+
+._petrofernandes-theme ._menu-fixed {
+    background-color: var(--color-default-green);
+}
+
+._petrofernandes-theme ._bem-vindo {
+    background-color: var(--color-default-green);
+}
+
+._petrofernandes-theme ._menu-fixed nav ul li a {
+    color: var(--yellow);
+}
+
+._petrofernandes-theme ._horario::before, ._petrofernandes-theme ._apoio::before {
+    background-color: var(--yellow);
+}
+
+._petrofernandes-theme .btn.btn-success {
+    background: var(--color-default-green);
+    color: var(--yellow);
+}
+
+._petrofernandes-theme .carousel-caption {
+    color: var(--color-default-green);
+}
+
+/* ------------------ */
+
+._efeitos-theme ._bem-vindo {
+    background-color: var(--color-default-brown);
+}
+
+._efeitos-theme ._menu-fixed {
+    background-color: var(--color-default-brown);
+}
+
+._efeitos-theme .carousel-caption {
+    color: var(--bs-white);
+}
+
+._efeitos-theme ._menu-fixed nav ul li a {
+    color: var(--brown);
+}
+
+._efeitos-theme ._horario::before, ._efeitos-theme ._apoio::before {
+    background-color: var(--color-default-brown);
+}
+
+._efeitos-theme .btn.btn-success {
+    background: var(--color-default-brown);
+    color: var(--bs-white);
+}
+
+/* THEMES */
+
+.btn.btn-success {
+    border-radius: 23px;
+    border: 0;
+    padding: 12px 32px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 12px;
+    text-transform: uppercase;
+}
+
+a._link {
+    text-decoration: underline;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+    color: initial;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1370px) {}
+
+@media only screen and (max-width: 800px) {
+    /* --------------------- DEFAULT --------------------- */
+    .container {
+        padding-right: var(--bs-gutter-x, .75rem) !important;
+        padding-left: var(--bs-gutter-x, .75rem) !important;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .desk {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    h3 {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {}

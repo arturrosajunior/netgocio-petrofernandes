@@ -1,0 +1,29 @@
+
+h1 {
+    font-size: 7.5em;
+    margin: 15px 0px;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+  ._404_body{
+      max-width: 600px;
+      width: 100%;
+      max-width: 600px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      height: 100%;
+      justify-content: center;
+  }
+  ._404{
+      height: 100vh;
+  }
+  ._logo {
+      max-width: 300px;
+      width: 100%;
+  }

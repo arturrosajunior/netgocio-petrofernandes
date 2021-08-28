@@ -1,0 +1,157 @@
+<div class="_home">
+    <ng-container *ngIf="theme.themeChange == '_petrofernandes-theme'">
+        <app-carousel [data]="bannerPetroFernandes"></app-carousel>
+    </ng-container>
+    <ng-container *ngIf="theme.themeChange == '_efeitos-theme'">
+        <app-carousel [data]="bannerEfeitos"></app-carousel>
+    </ng-container>
+
+
+    <ng-container *ngIf="theme.themeChange == '_petrofernandes-theme'">
+        <section id="_infos-petrofernandes">
+            <div class="container-fluid">
+
+                <div class="float-start">
+                    <h3>Combustíveis<br>Petrofernandes</h3>
+                    <p>21/06/2021 a 27/06/2021</p>
+                </div>
+
+                <ngx-slick-carousel class=" carousel" #slickModal="slick-carousel" [config]="configSlideCombustivel">
+                    <div ngxSlickItem *ngFor="let item of listCombustivel" class="_combustivel">
+                        <span class="_icon-posto" [style.background]="item.color"></span>
+                        <div class="_text-combustivel">
+                            <h4>{{item.title}}</h4>
+                            <h5>{{item.price}}€</h5>
+                        </div>
+                    </div>
+                </ngx-slick-carousel>
+
+            </div>
+        </section>
+    </ng-container>
+
+    <section id="_servicos">
+        <div class="container">
+            <h2 class="text-center">Os nossos serviços</h2>
+            <ng-container *ngIf="theme.themeChange == '_petrofernandes-theme'">
+                <div class="row row-cols-2 row-cols-lg-3">
+                    <div class="col" *ngFor="let item of servicosPetrofernandes">
+                        <div class="_content-servico ">
+                            <a routerLink="{{item.url}}">
+                                <img src="{{item.img}}" alt="{{item.title}}" class="img-fluid" />
+                                <h3>{{item.title}}</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a routerLink="/{{linkServicoPetroFernandes}}" class="btn btn-success text-center">
+                        Ver todos os serviços
+                    </a>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="theme.themeChange == '_efeitos-theme'">
+                <div class="row row-cols-2 row-cols-lg-3">
+                    <div class="col" *ngFor="let item of servicosEfeitos">
+                        <div class="_content-servico ">
+                            <a routerLink="{{item.url}}">
+                                <img src="{{item.img}}" alt="{{item.title}}" class="img-fluid" />
+                                <h3>{{item.title}}</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a routerLink="/{{linkServicoEfeitos}}" class="btn btn-success text-center">
+                        Ver todos os serviços
+                    </a>
+                </div>
+            </ng-container>
+
+        </div>
+    </section>
+
+    <section id="_destaques">
+        <div class="container">
+            <h2 class="text-center">Destaques</h2>
+            <ng-container *ngIf="theme.themeChange == '_petrofernandes-theme'">
+                <ngx-slick-carousel class="carousel _slider-destaques" #slickModal="slick-carousel"
+                    [config]="slideConfigDestaque">
+                    <div ngxSlickItem *ngFor="let item of destaquesPetrofernandes" class="_item-destaques">
+                        <img src="{{item.image}}" alt="{{item.title}}" class="img-fluid d-block mx-auto">
+                        <div class="_content-item-destaques">
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.text}}</p>
+                            <a routerLink="/{{item.url}}" class="btn btn-success">{{item.textUrl}}</a>
+                        </div>
+                    </div>
+                </ngx-slick-carousel>
+                <a roterLink="/{{verMaisDestaquePetroFernandes}}" class="_link">Ver todos os destaques</a>
+            </ng-container>
+
+            <ng-container *ngIf="theme.themeChange == '_efeitos-theme'">
+                <ngx-slick-carousel class="carousel _slider-destaques" #slickModal="slick-carousel"
+                    [config]="slideConfigDestaque">
+                    <div ngxSlickItem *ngFor="let item of destaquesEfeitos" class="_item-destaques">
+                        <img src="{{item.image}}" alt="{{item.title}}" class="img-fluid d-block mx-auto">
+                        <div class="_content-item-destaques">
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.text}}</p>
+                            <a routerLink="/{{item.url}}" class="btn btn-success">{{item.textUrl}}</a>
+                        </div>
+                    </div>
+                </ngx-slick-carousel>
+                <a roterLink="/{{verMaisDestaqueEfeitos}}" class="_link">Ver todos os destaques</a>
+            </ng-container>
+        </div>
+    </section>
+
+    <section id="_destaque-especial">
+        <div class="container">
+            <ng-container *ngIf="theme.themeChange == '_petrofernandes-theme'">
+                <img src="{{destaqueEspecialPetroFernandes.image}}" alt="O Grupo Petrofernandes"
+                    class="_image-destaque">
+                <div class="_content-destque-especial">
+                    <h2>
+                        {{destaqueEspecialPetroFernandes.title}}
+                    </h2>
+                    <p>
+                        {{destaqueEspecialPetroFernandes.text}}
+                    </p>
+                    <ng-container *ngIf="destaqueEspecialPetroFernandes.linkExternal">
+                        <a href="{{destaqueEspecialPetroFernandes.url}}" target="_blank" class="btn btn-success">
+                            {{destaqueEspecialPetroFernandes.textUrl}}
+                        </a>
+                    </ng-container>
+                    <ng-container *ngIf="!destaqueEspecialPetroFernandes.linkExternal">
+                        <a routerLink="{{destaqueEspecialPetroFernandes.url}}" class="btn btn-success">
+                            {{destaqueEspecialPetroFernandes.textUrl}}
+                        </a>
+                    </ng-container>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="theme.themeChange == '_efeitos-theme'">
+                <img src="{{destaqueEspecialEfeitos.image}}" alt="O Grupo Petrofernandes" class="_image-destaque">
+                <div class="_content-destque-especial">
+                    <h2>
+                        {{destaqueEspecialEfeitos.title}}
+                    </h2>
+                    <p>
+                        {{destaqueEspecialEfeitos.text}}
+                    </p>
+                    <ng-container *ngIf="destaqueEspecialEfeitos.linkExternal">
+                        <a href="{{destaqueEspecialEfeitos.url}}" target="_blank" class="btn btn-success">
+                            {{destaqueEspecialEfeitos.textUrl}}
+                        </a>
+                    </ng-container>
+                    <ng-container *ngIf="!destaqueEspecialEfeitos.linkExternal">
+                        <a routerLink="{{destaqueEspecialEfeitos.url}}" class="btn btn-success">
+                            {{destaqueEspecialEfeitos.textUrl}}
+                        </a>
+                    </ng-container>
+                </div>
+            </ng-container>
+        </div>
+    </section>
+</div>

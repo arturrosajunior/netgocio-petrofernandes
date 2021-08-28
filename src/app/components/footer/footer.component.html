@@ -1,0 +1,219 @@
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 _menus">
+                <div class="desk">
+                    <div class="row ">
+                        <div class="col-md-3">
+                            <h3>Visite-nos</h3>
+                            <p>
+                                Rua estrada nacional 103, <br>
+                                4750-442 Feitos <br>
+                                Barcelos
+                            </p>
+                            <p>
+                                Todos os dias <br>
+                                Das 7h às 22h
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>Petrofernandes</h3>
+
+                            <ul>
+                                <li *ngFor="let item of menuPetrofernandes">
+                                    <a routerLink="{{item.url}}">
+                                        {{item.title}}
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="mt-4">
+                                <li>
+                                    <a href="">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="">Instagram</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h3>Cafetaria Efeitos</h3>
+
+                            <ul>
+                                <li *ngFor="let item of menuEfeitos">
+                                    <a routerLink="{{item.url}}">
+                                        {{item.title}}
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="mt-4">
+                                <li>
+                                    <a href="">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="">Instagram</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h3>Mais informações</h3>
+
+                            <ul>
+                                <li *ngFor="let item of menuInfos">
+                                    <a routerLink="{{item.url}}">
+                                        {{item.title}}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile">
+                    <div class="row ">
+                        <div class="col-md-12 _infos-visite-nos">
+                            <h3>Visite-nos</h3>
+                            <p>
+                                Rua estrada nacional 103, <br>
+                                4750-442 Feitos <br>
+                                Barcelos
+                            </p>
+                            <p>
+                                Todos os dias <br>
+                                Das 7h às 22h
+                            </p>
+                        </div>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="flush-heading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collaps1" aria-expanded="false"
+                                        aria-controls="flush-collaps1">
+                                        Petrofernandes
+                                    </button>
+                                </h3>
+                                <div id="flush-collaps1" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li *ngFor="let item of menuPetrofernandes">
+                                                <a routerLink="{{item.url}}">
+                                                    {{item.title}}
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <ul class="mt-4">
+                                            <li>
+                                                <a href="">Facebook</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Instagram</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="flush-heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapse2" aria-expanded="false"
+                                        aria-controls="flush-collapse2">
+                                        Cafetaria Efeitos
+                                    </button>
+                                </h3>
+                                <div id="flush-collapse2" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li *ngFor="let item of menuEfeitos">
+                                                <a routerLink="{{item.url}}">
+                                                    {{item.title}}
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <ul class="mt-4">
+                                            <li>
+                                                <a href="">Facebook</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Instagram</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="flush-heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapse3" aria-expanded="false"
+                                        aria-controls="flush-collapse3">
+                                        Mais informações
+                                    </button>
+                                </h3>
+                                <div id="flush-collapse3" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li *ngFor="let item of menuInfos">
+                                                <a routerLink="{{item.url}}">
+                                                    {{item.title}}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 _news-letter">
+                <h3>Subscreva a nossa Newsletter</h3>
+                <input type="text" class="form-control" placeholder="Coloque o seu email">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="aceite">
+                    <label class="form-check-label" for="aceite">
+                        Declaro que li e aceito a Política de Privacidade.
+                    </label>
+                </div>
+                <button class="btn _btn-news" type="button">Subscrever</button>
+
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-md-12 ">
+                <p class="_todos-os-direitos">
+                    Grupo Petrofernandes © Todos os direitos reservados.<br>
+                    <a href="https://netgocio.pt" target="_blank" class="_link-to-netgocio">Desenvolvido por
+                        Netgócio</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="_whatsapp">
+    <a href="https://wa.me/" target="_blank"><img src="assets/img/whatsapp.svg" alt="WhatsApp"></a>
+</div>
+
+<!-- 
+<div class="_ficha-tec">
+    <a href="assets/img/ficha-projeto-pt-2020.pdf" target="_blank">
+        <figure class="text-center">
+           <svg-icon src="assets/img/logo-pt.svg"></svg-icon> 
+        </figure>
+    </a>
+</div> -->

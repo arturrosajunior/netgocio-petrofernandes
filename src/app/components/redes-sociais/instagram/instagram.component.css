@@ -1,0 +1,55 @@
+#_instagram {
+    padding: 50px 0px 30px;
+    min-height: 300px;
+}
+
+#_instagram h3 {
+    font: normal normal 300 20px/25px Poppins;
+    letter-spacing: 0.8px;
+    margin-bottom: .2rem;
+    color: #252526;
+    text-align: center;
+}
+
+#_instagram h4 {
+    font: normal normal 300 16px/25px Poppins;
+    letter-spacing: 0.8px;
+    color: #808080;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+._lista-itens-instagram {
+    overflow: hidden;
+    max-height: 140px;
+}
+
+._lista-itens-instagram ._item-insta {
+    display: inline-block;
+    margin: 0px 7px 30px;
+}
+
+._lista-itens-instagram ._item-insta:last-child {
+    margin-right: 0px;
+}
+
+.mask-insta {
+    width: 140px;
+    height: 140px;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+/* FIM - FOOTER */
+
+@media only screen and (max-width: 1370px) {}
+
+@media only screen and (max-width: 900px) {
+    ._lista-itens-instagram {
+        overflow-y: hidden;
+        overflow-x: scroll;
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 600px) {}

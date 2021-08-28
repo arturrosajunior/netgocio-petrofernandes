@@ -1,0 +1,14 @@
+<ng-container *ngIf="data.banner_footer == 1">
+    <section id="_banner-footer" [style.background-image]="'url(' + data?.banner_imagem[0] + ')'">
+        <div class="_content-banner-footer">
+            <div class="_box">
+                <h2>{{data?.banner_titulo}}</h2>
+                <p [innerHtml]="data?.banner_texto | noHtml"></p>
+                <!-- <p>{{textos?.nossos_projetos?.descricao}}</p> -->
+                <a routerLink="/{{data?.banner_botao_url}}" class="_call-to-action">
+                    {{data.banner_botao_texto}}
+                </a>
+            </div>
+        </div>
+    </section>
+</ng-container>

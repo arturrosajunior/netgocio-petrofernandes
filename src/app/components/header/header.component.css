@@ -1,0 +1,228 @@
+._header {
+    width: 100%;
+    background: var(--bs-white);
+    transition: all .3s;
+    position: relative;
+    z-index: 9999;
+}
+
+._header ._logo {
+    /* width: 277px; */
+}
+
+._petrofernandes {
+    background-color: var(--color-default-green);
+    width: 226px;
+    padding: 26px 0px;
+}
+
+._efeitos {
+    background-color: var(--color-default-brown);
+    width: 226px;
+    padding: 26px 0px;
+}
+
+._horarios-header {
+    width: 66%;
+}
+
+._horarios-header h3 {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+    margin-bottom: 8px;
+}
+
+._horarios-header p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 0px;
+}
+
+._horario {
+    position: relative;
+    width: 360px;
+}
+
+._horario::before {
+    content: '';
+    float: left;
+    margin-right: 12px;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    -webkit-mask: url(/assets/img/clock.svg) center center / contain no-repeat;
+}
+
+._apoio {
+    position: relative;
+    width: 300px;
+}
+
+._apoio::before {
+    content: '';
+    float: left;
+    margin-right: 12px;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    -webkit-mask: url(/assets/img/apoio.svg) center center / contain no-repeat;
+}
+
+/* nav */
+
+._menu-fixed {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+._menu-fixed nav ul {
+    text-align: left;
+    padding: 17px 0px;
+    margin: 0;
+}
+
+._menu-fixed nav ul li {
+    display: inline-block;
+    margin-right: 45px;
+    text-transform: uppercase;
+}
+
+._menu-fixed nav ul li a {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+._open-menu, ._loja-online {
+    display: none;
+}
+
+/* nav */
+
+@media only screen and (max-width: 1370px) {}
+
+@media only screen and (max-width: 1280px) {
+    ._header ._logo {
+        width: auto;
+        max-width: 100%;
+    }
+    ._logo img {
+        max-width: 100%;
+    }
+    ._header nav ul {
+        text-align: left;
+    }
+    ._header nav ul li {
+        margin-right: 8px;
+    }
+    ._header nav ul li a {
+        font-size: 14px;
+        padding-right: 18px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    ._open-menu {
+        background: var(--bs-white);
+        border: 0;
+        display: block;
+        position: relative;
+        z-index: 150;
+        width: 26%;
+    }
+    button._petrofernandes {
+        height: 79px;
+        width: 150px;
+        padding: unset !important;
+    }
+    button._petrofernandes img {
+        height: 45px;
+        width: 100%;
+    }
+    button._efeitos {
+        padding: unset !important;
+        height: 79px;
+        width: 150px;
+    }
+    button._efeitos img {
+        height: 52px;
+    }
+    ._header {
+        position: fixed;
+        top: 0;
+    }
+    ._header nav {
+        position: absolute;
+        background: var(--color-default-green);
+        inset: 0;
+        height: 100vh;
+        z-index: 100;
+        display: none;
+    }
+    ._header nav._open {
+        display: block;
+    }
+    ._header nav ul {
+        padding-top: 90px;
+        text-align: center;
+    }
+    ._header nav ul li {
+        display: block;
+        margin: 10px 0px;
+    }
+    ._header nav ul li a {
+        font-weight: bold;
+        line-height: 43px;
+        padding-right: 0;
+        background: transparent !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    ._menu-fixed {
+        display: none;
+        z-index: 500;
+    }
+    ._menu-fixed._open {
+        display: table;
+        width: 100%;
+    }
+    ._menu-fixed._open .container {
+        display: table-cell;
+        width: 100%;
+        vertical-align: middle;
+    }
+    ._horarios-header {
+        display: none;
+    }
+    ._menu-fixed {
+        height: 100vh;
+        position: fixed;
+    }
+    ._menu-fixed nav ul {
+        text-align: center;
+        padding: 17px 0px;
+        margin: 0;
+    }
+    ._menu-fixed nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    ._bem-vindo {
+        padding: 10px 19px;
+        position: relative;
+    }
+    ._bem-vindo p {
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 16px;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+        color: var(--bs-white);
+    }
+}
